@@ -1,5 +1,5 @@
 function dropLast(...)
-  array = table.pack(...)
+  local array = table.pack(...)
   return table.unpack(array, 1, array.n-1)  
 end
 

@@ -1,5 +1,5 @@
 function concat(strings)
-  outString = ""
+  local outString = ""
   for _,v in ipairs(strings) do
     outString = outString .. v
   end

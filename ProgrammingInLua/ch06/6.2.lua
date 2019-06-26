@@ -1,5 +1,5 @@
 function dropFirst(...)
-  array = table.pack(...)
+  local array = table.pack(...)
   return table.unpack(array, 2, array.n)  
 end
 

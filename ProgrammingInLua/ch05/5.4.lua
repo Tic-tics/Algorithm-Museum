@@ -1,8 +1,8 @@
 --almost fulfills 5.5
 --technically does 2*n multiplications
 function polynomialEval(x, poly)
-  value = poly[0] or 0
-  currentEXP = 1
+  local value = poly[0] or 0
+  local currentEXP = 1
   for exponent, coeficent in ipairs(poly) do
     currentEXP = currentEXP * x
     value = value + (coeficent * currentEXP)
