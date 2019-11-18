@@ -1,3 +1,4 @@
+#!/usr/local/bin/lua -i
 N = 8 --board size
 
 --check whether position (n,c) is free from attacks
@@ -39,5 +40,7 @@ function addqueen (a,n)
 	end
 end
 
---run the program
-addqueen({}, 1)
+function test()
+	--run the program
+	addqueen({}, 1)
+end

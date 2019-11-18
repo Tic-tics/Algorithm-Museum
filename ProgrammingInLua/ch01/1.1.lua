@@ -1,3 +1,4 @@
+#!/usr/local/bin/lua -i
 --defines a factorial function
 function fact(n)
 	if n <= 0 then
@@ -7,6 +8,8 @@ function fact(n)
 	end
 end
 
-print("enter a number:")
-a = io.read("*n")
-print(fact(a))
+function test()
+	print("enter a number:")
+	a = io.read("*n")
+	print(fact(a))
+end

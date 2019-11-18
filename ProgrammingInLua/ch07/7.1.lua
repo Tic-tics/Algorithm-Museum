@@ -1,3 +1,4 @@
+#!/usr/local/bin/lua -i
 function sortFile(inp, out)
   local inp = inp or nil --signify that it is optional
   local out = out or inp --only nil if both are nil
@@ -37,9 +38,13 @@ function sortFile(inp, out)
   out:close()
 end
 
---ZeroBrane is set with the algorithm museum as the project base.
---Unfortunately, you may need to change this path for the demo to work, depending on your setup.
-sortFile(".\\ProgrammingInLua\\ch07\\7.1.in",".\\ProgrammingInLua\\ch07\\7.1.out")
+function test()
+  --Instead of using the test function, I suggest you call sortFile directly
 
---This call is destructive to the test file
---sortFile(".\\ProgrammingInLua\\ch07\\7.1.in")
+  --ZeroBrane is set with the algorithm museum as the project base.
+  --Unfortunately, you may need to change this path for the demo to work, depending on your setup.
+  sortFile(".\\ProgrammingInLua\\ch07\\7.1.in",".\\ProgrammingInLua\\ch07\\7.1.out")
+
+  --This call is destructive to the test file
+  --sortFile(".\\ProgrammingInLua\\ch07\\7.1.in")
+end

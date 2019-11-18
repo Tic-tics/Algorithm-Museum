@@ -1,3 +1,4 @@
+#!/usr/local/bin/lua -i
 function validSequence(seq)
   local seqIndex = {}
   for k,_ in ipairs(seq) do
@@ -9,5 +10,7 @@ function validSequence(seq)
   return true
 end
 
-print(validSequence({1,2,3,4,5,6,7}))
-print(validSequence({1,2,3,4,[100]=true}))
+function test()
+  print(validSequence({1,2,3,4,5,6,7}))
+  print(validSequence({1,2,3,4,[100]=true}))
+end

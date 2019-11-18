@@ -1,3 +1,4 @@
+#!/usr/local/bin/lua -i
 function sortFile(inp, out)
   if (not out) and inp then
     print("Are you sure you want to overwrite " .. inp .. "?")
@@ -47,9 +48,13 @@ function sortFile(inp, out)
   out:close()
 end
 
---ZeroBrane is set with the algorithm museum as the project base.
---Unfortunately, you may need to change this path for the demo to work, depending on your setup.
-sortFile(".\\ProgrammingInLua\\ch07\\7.2.in",".\\ProgrammingInLua\\ch07\\7.2.out")
+function test()
+  --Instead of using the test function, I suggest you call sortFile directly
 
---This call is destructive to the test file
-sortFile(".\\ProgrammingInLua\\ch07\\7.2.in")
+  --ZeroBrane is set with the algorithm museum as the project base.
+  --Unfortunately, you may need to change this path for the demo to work, depending on your setup.
+  sortFile(".\\ProgrammingInLua\\ch07\\7.2.in",".\\ProgrammingInLua\\ch07\\7.2.out")
+
+  --This call is destructive to the test file
+  sortFile(".\\ProgrammingInLua\\ch07\\7.2.in")
+end

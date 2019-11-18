@@ -1,3 +1,4 @@
+#!/usr/local/bin/lua -i
 function printCombos(deck, prefix, first)
   local prefix = prefix or ""
   local first = first or 1
@@ -7,4 +8,6 @@ function printCombos(deck, prefix, first)
   printCombos(deck, prefix, first+1)
 end
 
-printCombos({1,2,3,4})
+function test()
+  printCombos({1,2,3,4})
+end

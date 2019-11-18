@@ -1,3 +1,5 @@
+#!/usr/local/bin/lua -i
+
 --almost fulfills 5.5
 --technically does 2*n multiplications
 function polynomialEval(x, poly)
@@ -10,5 +12,7 @@ function polynomialEval(x, poly)
   return value
 end
 
-print(polynomialEval(2,{[0]=2,1,1}))
-print(polynomialEval(5,{[0]=5}))
+function test()
+  print(polynomialEval(2,{[0]=2,1,1}))
+  print(polynomialEval(5,{[0]=5}))
+end

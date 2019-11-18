@@ -1,3 +1,4 @@
+#!/usr/local/bin/lua -i
 function coneVolumeRad(height, radius)
 	return math.pi * math.pow(radius, 2) * height * (1/3)
 end
@@ -14,9 +15,11 @@ function coneVolume(height, angle)
 	return coneVolumeRad(height, getRadius(height, degToRad(angle)))
 end
 
-print("What is your cone's height?")
-h = io.read("*n")
-print("What is your cone's angle?")
-r = io.read("*n")
+function test()
+	print("What is your cone's height?")
+	h = io.read("*n")
+	print("What is your cone's angle?")
+	r = io.read("*n")
 
-print(coneVolume(h,r))
+	print(coneVolume(h,r))
+end

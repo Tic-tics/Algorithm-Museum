@@ -1,3 +1,4 @@
+#!/usr/local/bin/lua -i
 math.randomseed(os.time())
 function shuffle(deck)
   for i = #deck, 2, -1 do
@@ -7,4 +8,6 @@ function shuffle(deck)
   return deck
 end
 
-print(table.unpack(shuffle({1,2,3,4,5})))
+function test()
+  print(table.unpack(shuffle({1,2,3,4,5})))
+end
